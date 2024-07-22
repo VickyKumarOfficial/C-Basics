@@ -1,5 +1,5 @@
 #include<stdio.h>
-int mai(){
+int main(){
     int x, y;
     printf("Enter the Co-ordinates :");
     scanf("%d %d", &x, &y);
