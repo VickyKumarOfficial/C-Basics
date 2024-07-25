@@ -49,14 +49,13 @@ int main(){
     int Perimeter = 2*(l+b);
     printf("Perimeter is :%d\n", Perimeter);
 
-     if (Area > Perimeter){
+    if (Area > Perimeter){
         printf("Area is greater than Perimeter");
-        } 
-            else if (Perimeter > Area) {
-            printf("Perimeter is greater than Area");
-            }
-    else
-    {
+    } 
+    else if (Perimeter > Area) {
+        printf("Perimeter is greater than Area");
+    }
+    else{
         printf("Both are equal :)");
     }
      

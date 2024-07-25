@@ -40,8 +40,8 @@ int main(){
        else if (c>a && c>b && c>d)
             printf("%d is the greatest number",c);
         
-        else if (d>a && d>b && d>c)
-            printf("%d is the greatest number",d);
+            else if (d>a && d>b && d>c)
+                printf("%d is the greatest number",d);
         
     return 0;
 
