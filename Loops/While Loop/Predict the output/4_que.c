@@ -22,6 +22,7 @@ int main(){
 //     printf("%d",x++);      
 // }
 
+
 // #include<stdio.h>
 // int main(){
 //     int x = 5;
