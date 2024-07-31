@@ -14,7 +14,7 @@ int main(){
     //     n = n / 10;
     //     a++;
     // }
-    // can't use for statment coz using 'i' makes no sense and hence not an good option.
+    // can't use "for loop" statment coz using 'i' makes no sense and hence not an good option.
     printf("The number of digits are %d\n",a);
     return 0;
 }
