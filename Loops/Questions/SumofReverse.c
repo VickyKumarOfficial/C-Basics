@@ -16,6 +16,8 @@ int main(){
     // sum = Revno + n;
     // printf("The total sum of both the number is :%d",sum);
     sum = n / 10;
+    int original;
+    original = n;
     printf("Reversed number is :%d\n");
     return 0;
 }
