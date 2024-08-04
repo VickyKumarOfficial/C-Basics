@@ -3,14 +3,14 @@
 #include<stdio.h>
 
 int main(){
-    int n, sum = 1;
+    int n, product = 1;
     printf("enter a number :");
     scanf("%d",&n);
     for (int i = n; i != 1; i--)
     {
-        sum = sum * i;
+        product = product * i;
     }
-    printf("sum = %d",sum);
+    printf("product = %d",product);
     return 0;
 }
 
@@ -19,14 +19,13 @@ int main(){
 #include<stdio.h>
 
 int main(){
-    int n, sum;
+    int n, product = 1;
     printf("Enter a number :");
     scanf("%d",&n);
-    sum = 1;
     while (n!=1){
-        sum = sum * n;
+        product = product * n;
         n--;
     }
-    printf("The sum is:%d",sum);
+    printf("The sum is:%d",product);
     return 0;
 }
