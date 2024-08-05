@@ -127,31 +127,29 @@
 
 // Q. WAP to show number of ones, number of tens, number of hundreds for the given three digits number as input.
 
-// #include<stdio.h>
-
-// int main(){
-//     int x, n;
-//     printf("Enter any 3-digit numebr :");
-//     scanf("%d",&n);
-//     x = n % 10;
-//     printf("The one's digit is %d\n",x);   
-//     x = n / 10;
-//     x = x % 10;
-//     printf("The ten's digit is %d\n",x);
-//     x = n / 10;
-//     x = n / 100;
-//     printf("The hundred's digit is %d",x);   
-//     return 0;
-// }
-
-// Q. WAP to find 2nd digit from the given four digit number.
-
 #include<stdio.h>
 
 int main(){
-        
+    int n;
+    printf("Enter any 3-digit numebr :");
+    scanf("%d",&n);
+    n = n % 10;
+    printf("The one's digit is %d\n",n%10);
+    n = n / 10;
+    printf("The ten's digit is %d\n",n%10);
+    n = n / 10;
+    printf("The hundred's digit is %d",n%10);   
     return 0;
 }
+
+// Q. WAP to find 2nd digit from the given four digit number.
+
+// #include<stdio.h>
+
+// int main(){
+        
+//     return 0;
+// }
 
 // Q. WAP to find the summ of 1st and last digit from the given four digit number.
 
