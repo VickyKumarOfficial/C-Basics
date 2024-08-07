@@ -1,4 +1,7 @@
+// Print the Amstrong number ranging from 0-500.
+
 #include<stdio.h>
+#include<math.h>
 
 int main(){
     int n;
@@ -18,5 +21,27 @@ int main(){
         m = m / 10;
     }
     if (original == ams)
+    return 0;
+}
+
+#include<stdio.h>
+#include<math.h>
+
+int main(){
+    int n;
+    printf("Enter a number :");
+    scanf("%d",&n);
+    int count = 0, m = n, Amstrong, digits = 0;
+    while (n != 0){
+            int remainder = n % 10;
+            count++;
+            int rev = (rev * 10) + remainder;
+            n = n / 10;
+    }
+    printf("Reversed number is :%d",count);
+        while (m != 0){
+            Amstrong += pow(m % 10,digits);
+        }
+        
     return 0;
 }
