@@ -127,36 +127,81 @@
 
 // Q. WAP to show number of ones, number of tens, number of hundreds for the given three digits number as input.
 
-#include<stdio.h>
+// #include<stdio.h>
 
-int main(){
-    int n;
-    printf("Enter any 3-digit numebr :");
-    scanf("%d",&n);
-    n = n % 10;
-    printf("The one's digit is %d\n",n%10);
-    n = n / 10;
-    printf("The ten's digit is %d\n",n%10);
-    n = n / 10;
-    printf("The hundred's digit is %d",n%10);   
-    return 0;
-}
+// int main() {
+//     int n;
+//     printf("Enter any 3-digit number: ");
+//     scanf("%d", &n);
+
+//     int ones = n % 10;
+//     printf("The one's digit is %d\n", ones);
+
+//     n = n / 10;
+//     int tens = n % 10;
+//     printf("The ten's digit is %d\n", tens);
+
+//     n = n / 10;
+//     int hundreds = n % 10;
+//     printf("The hundred's digit is %d\n", hundreds);
+
+//     return 0;
+// }
 
 // Q. WAP to find 2nd digit from the given four digit number.
 
 // #include<stdio.h>
 
 // int main(){
-        
+//     int n;
+//     printf("Enter a number :");
+//     scanf("%d",&n);
+//     n = n/100;
+//     n = n % 10;
+//     printf("The 2nd number is :%d",n);    
 //     return 0;
 // }
 
-// Q. WAP to find the summ of 1st and last digit from the given four digit number.
+// Q. WAP to find the sum of 1st and last digit from the given four digit number.
 
 // #include<stdio.h>
 
 // int main(){
-    
+//      int n;
+//      printf("Enter a number :");
+//      scanf("%d",&n);
+//      int n1 = n % 10;
+//      printf("The last digit is :%d\n",n1);
+//      n = n / 1000;
+//      int ld = n % 10;
+//      printf("1st digit is :%d\n",ld);
+//      int sum = n1 + n;
+//      printf("Sum = %d",sum);
+//     return 0;
+// }
+// #include<stdio.h>
+
+// int main() {
+//     int n, firstDigit, lastDigit, sum;
+
+//     // Prompt the user to enter a number
+//     printf("Enter a 4-digit number: ");
+//     scanf("%d", &n);
+
+//     // Extract the last digit
+//     lastDigit = n % 10;
+
+//     // Extract the first digit by dividing by 1000
+//     firstDigit = n / 1000;
+
+//     // Calculate the sum of the first and last digit
+//     sum = firstDigit + lastDigit;
+
+//     // Print the results
+//     printf("The first digit is: %d\n", firstDigit);
+//     printf("The last digit is: %d\n", lastDigit);
+//     printf("Sum of the first and last digit is: %d\n", sum);
+
 //     return 0;
 // }
 
@@ -168,3 +213,75 @@ int main(){
     
 //     return 0;
 // }
+
+// Q. WAP to find height in cm for the given height in feet and inches as input.
+
+// #include<stdio.h>
+
+// int main(){
+//     int f;
+//     printf("Enter height in feet :");
+//     scanf("%d",&f);
+//     float i;
+//     printf("Enter height in inches :");
+//     scanf("%f",&i);
+//     int cm = f * 30;
+//     float cm1 = i * 2.5;
+//     float sum = cm + cm1;
+//     printf("Height is :%.2f",sum);
+//     return 0;
+// }
+
+// Q. WAP to calculate average marks in CTSD exam for the given theory, practicals, skill exam marks.
+
+// #include<stdio.h>
+
+// int main(){
+
+//     return 0;
+// }
+
+// Q. i) WAP to claculate total runs score and number of balls for the given - a. number of sixes. b. number of forse. c. number of threes. d. number of twos. e. number of ones. f. number of dot balls.
+// ii) Also find the Strike rate.
+
+// #include<stdio.h>
+
+// int main(){
+//     int n1, n2, n3, n4, n5, n6;
+//     printf("Enter the runs scored :");
+//     scanf("%d %d %d %d %d %d",&n1,&n2,&n3,&n4,&n5,&n6);
+//     int runs = (n1 * 6) + (n2 * 4) + (n3 * 3) + (n4 * 2) + (n5 * 1) + (n6 * 0);
+//     printf("Total run scored :%d\n",runs);
+//     int balls = n1 + n2 + n3 + n4 + n5 + n6;
+//     printf("No. of balls played = %d",balls);
+//     return 0;
+// }
+
+// Q. WAP to find Boys : Girls ratio in a class for a given number of boys and girls are as input.
+
+// #include<stdio.h>
+
+// int main(){
+//     int G, B;
+//     printf("Enter number of girls in the class :");
+//     scanf("%d",&G);
+//     printf("Enter number of boys in the class :");
+//     scanf("%d",&B);
+//     int Total = G + B;
+//     printf("Total number of boys and girls in the class is = %d\n",Total);
+//     float gratio = (float)G/Total*100;
+//     float bratio = (float)B/Total*100;
+//     printf("The ratio of girls and boys are %.2f : %.2f",gratio,bratio);
+//     return 0;
+// }
+
+// Q. WAP to find/claculate total marks by considering 3 courses where 1st course is given 50% weightage, 2nd course is given 30%, 3rd course 20% of weightage.
+
+// #include<stdio.h>
+
+// int main(){
+    
+//     return 0;
+// }
+
+// Q.

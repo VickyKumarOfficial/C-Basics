@@ -8,8 +8,10 @@ int main(){
         int rem = n % 10;
         digits++;
         sum = sum + rem;
-        rev = (rev*10) + rem;
-        n = n / 10;
+        // Reversing the number
+        rev = (rev*10) + rem;  
+        // Eliminating the last number
+        n = n / 10;     
     }
     while (m != 0) {
         ams += pow(m%10, digits);
