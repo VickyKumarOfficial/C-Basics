@@ -8,8 +8,10 @@ int main(){
     scanf("%d",&n);
     for (int i = 1; i <= n; i++){
         product = product * i;
+        // To print everystep of factorial
         printf("The factorial of %d is :%d\n",i,product);
     }
+    // to print only the end answer of input number's factorial
     // printf("product = %d",product);
     return 0;
 }
