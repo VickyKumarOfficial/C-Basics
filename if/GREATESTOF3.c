@@ -1,20 +1,22 @@
-// #include <stdio.h>
+// Q. Take input of 3 numbers and display 
 
-// int main(){
-//     int n1, n2, n3;
-//     printf("Enter any number :");
-//     scanf("%d %d %d", &n1, &n2, &n3);
-//     if (n1 > n2 && n2 > n3){
-//         printf("%d n1 is the greatest",n1);
-//     }
-//     else if (n2 > n1){
-//             printf("n2 is the greatest");
-//     }
-//     else {
-//         printf("n3 is the greatest");
-//     }
-//     return 0;
-// }
+#include <stdio.h>
+
+int main(){
+    int n1, n2, n3;
+    printf("Enter any number :");
+    scanf("%d %d %d", &n1, &n2, &n3);
+    if (n1 > n2 && n2 > n3){
+        printf("%d n1 is the greatest",n1);
+    }
+    else if (n2 > n1){
+            printf("n2 is the greatest");
+    }
+    else {
+        printf("n3 is the greatest");
+    }
+    return 0;
+}
 
 // OR Better code and with 4 numbers input.
 
