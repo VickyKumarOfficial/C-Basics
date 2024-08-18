@@ -140,3 +140,8 @@
 // If 1st digit less than 2nd digit -> zig zag
 // If 2nd digit less than 1st digit -> zag zig
 // If only 1 digit number is input -> zag zag
+
+// Q. Write a C program to calculate electricity bill for the given two inputs with the help of following:
+// Input-
+// 1. numbe of Units consumed
+// 2. Type of connection - Domestic or Commercial
