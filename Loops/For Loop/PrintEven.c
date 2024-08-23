@@ -11,7 +11,9 @@
 
 #include<stdio.h>
 int main(){
-    for ( int i = 0; i <= 100; i=i+2) printf("%d ",i);
-    
+    // for ( int i = 0; i <= 100; i=i+2) printf("%d ",i);
+    int n = 70;
+    if (n & 1) printf("Odd");
+    else printf("No");
     return 0;
 }
