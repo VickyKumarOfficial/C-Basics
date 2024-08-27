@@ -98,51 +98,72 @@
 //     printf("Enter any letter :");
 //     scanf("%c",&v);
 //     switch (v){
-//     case 'a': printf("It is a vowel!");
+//     // case 'a': printf("It is a vowel!");
+//     //     break;
+//     // case 'A': printf("It is a vowel!");
+//     //     break;
+//     // case 'e': printf("It is a vowel!");
+//     //     break;
+//     // case 'E': printf("It is a vowel!");
+//     //     break;
+//     // case 'i': printf("It is a vowel!");
+//     //     break;
+//     // case 'I': printf("It is a vowel!");
+//     //     break;
+//     // case 'o': printf("It is a vowel!");
+//     //     break;
+//     // case 'O': printf("It is a vowel!");
+//     //     break;
+//     // case 'u': printf("It is a vowel!");
+//     //     break;
+//     // case 'U': printf("It is a vowel!");
+//     //     break;
+//     // default: printf("Not a vowel it is a consonent");
+//     //     break;
+
+//     // ANother way to write in short:
+
+//     case 'a':
+//     case 'A':
+//     case 'e':
+//     case 'E':
+//     case 'i':
+//     case 'I':
+//     case 'o':
+//     case 'O':
+//     case 'u':
+//     case 'U':
+//         printf("It is a vowel!");
 //         break;
-//     case 'A': printf("It is a vowel!");
-//         break;
-//     case 'e': printf("It is a vowel!");
-//         break;
-//     case 'E': printf("It is a vowel!");
-//         break;
-//     case 'i': printf("It is a vowel!");
-//         break;
-//     case 'I': printf("It is a vowel!");
-//         break;
-//     case 'o': printf("It is a vowel!");
-//         break;
-//     case 'O': printf("It is a vowel!");
-//         break;
-//     case 'u': printf("It is a vowel!");
-//         break;
-//     case 'U': printf("It is a vowel!");
-//         break;
-//     default: printf("Not a vowel it is a consonent");
+//         default: printf("Not a vowel");
 //         break;
 //     }
 //     return 0; 
 // }
 
 // Q. Write a C program to find whether the given number is even or odd using switch case.
+// NOTE: In Switch case 'Relation Operators' doesn't work.
 
-#include<stdio.h>
+// #include<stdio.h>
 
-int main(){
-    int n;
-    printf("Enter a number :");
-    scanf("%d",&n);
-    switch (n%2)
-    {
-    case (0):
-        printf("Number is even");
-        break;
-    case (1):
-        printf("Number is odd");
-        break;
+// int main(){
+//     int n;
+//     printf("Enter a number :");
+//     scanf("%d",&n);
+//     switch (n%2)
+//     {
+//     case (0):
+//         printf("Number is even");
+//         break;
+//     case (1):
+//         printf("Number is odd");
+//         break;
     
-    default: printf("Neither even nor odd");
-        break;
-    }
-    return 0;
-}
+//     default: printf("Neither even nor odd");
+//         break;
+//     }
+//     return 0;
+// }
+
+// Q. Write a C program to find whether the out of given two number as input which is the greater number using switch case.
+
