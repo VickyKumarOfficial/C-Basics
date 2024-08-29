@@ -10,9 +10,9 @@ int main(){
     for(int i = 1; i <= n; i++){ // In this case no. of Iterations is high
     // and it is very un-effeceint code. So, not using this. Prefer if-else.
         if (i % 2 != 0)
-            sum = sum + i;
+            sum = sum - i;
             else
-                sum = sum - i;
+                sum = sum + i;
     }
     printf("The sum is :%d",sum);
     return 0;

@@ -7,8 +7,8 @@ int main(){
     // What is Typecasting:
     int x = 65;
     printf("%d\n",x);
-    char ch = (char)x; // It means in 'char' Data type we are creatinf a variable "ch" where we store x value in char type. (char)x;
-                       // udhar (char) hai to it will be print alphabet similarly if we write int then alphabet corresponds that valu will print.
+    char ch = (char)x; // It means in 'char' Data type we are creating a variable "ch" where we store x value in char type. (char)x;
+                       // udhar (char) hai to it will be print alphabet similarly if we write int then alphabet corresponds that value will print.
     printf("%c",ch);
     char ch = 'A';
     printf("%c\n",ch);
