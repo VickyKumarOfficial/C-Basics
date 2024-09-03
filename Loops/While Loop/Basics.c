@@ -78,3 +78,8 @@ int main(){
 }
 
 // Write a C program to display all uppercase letters.
+// WAP to find the sum of the digits of the given number
+// WAP to find the product of the digits of the given number
+// WAP to count the number of digits of the given number
+// WAP to check whether the given number is Amstrong number or not.
+// WAP to reverse a given number.
