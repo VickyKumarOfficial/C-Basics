@@ -13,6 +13,6 @@ int main(){
         b = sum;
     }
     if (n == 2) sum = 1;
-    printf("The %dth term of fibonacci is : %d", n, sum);
+    printf("The %dth term of fibonacci is : %d",n,sum);
     return 0;
 }
