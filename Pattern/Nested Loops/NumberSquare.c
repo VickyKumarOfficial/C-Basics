@@ -96,25 +96,3 @@
 //     9  10 11 12
 //     5   6  7  8
 //     1   2  3  4 
-
-
-#include<stdio.h>
-
-int main(){
-    int n;
-    printf("Enter a number :");
-    scanf("%d",&n);
-    // int x = n;
-    for (int i = 1; i <= n; i++)
-    {
-        int x=i;
-        for (int j = 1; j <= n; j++){
-            
-            printf("%3d ",x); // %3d is used to display the pattern in an structred way.
-            x+=4;
-        }
-        printf("\n");
-    }
-    
-    return 0;
-}
