@@ -49,10 +49,11 @@ int main() {
         printf("%.1f ", term);
         
         // Alternating the increment between 0.1 and 0.3
-        if (i % 2 != 0) term += 0.1;
-        
-        else term += 0.3;
-
+        if (i % 2 != 0) {
+            term += 0.1;
+        } else {
+            term += 0.3;
+        }
     }
 
     return 0;
