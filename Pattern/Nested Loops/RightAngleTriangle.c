@@ -14,3 +14,22 @@ int main(){
     return 0;
 }
 
+#include<stdio.h>
+
+int main(){
+    int n,r,x;
+    printf("enter a number:");
+    scanf("%d",&n);
+
+
+for(r=1;r<=n;r++)
+{
+    for(x=1;x<=r;x++)
+    {
+        printf("* ");
+    }
+    printf("\n");
+}
+
+    return 0;
+}
