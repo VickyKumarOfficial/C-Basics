@@ -17,7 +17,7 @@ int main(){
             printf("%3d ",a);
             a = a + 2;
         }
-        printf("\3");
+        printf("\n");
     }
     
     return 0;
