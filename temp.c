@@ -1,12 +1,11 @@
 #include<stdio.h>
-
-int main(){
-    int a=10, b=20;
-    printf("%d %d\n",a, b);
-    b = a^b;
-    a = a^b;
-    b = a^b;
-    printf("%d %d\n",a, b);
-
-    return 0;
+int main()
+{
+  int a,b,c,d;
+  printf("Enter 2 numbers");
+  scanf("%d%d",&a,&b);
+  c = a<<b;
+  d=a>>b;
+  printf("Left shift result = %d ",c);
+  printf("\nRight shift result = %d ",d);
 }
