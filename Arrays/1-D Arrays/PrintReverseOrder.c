@@ -2,13 +2,13 @@
 
 #include<stdio.h>
 int main(){
-    int arr[5];
-    for(int i = 0; i <= 4; i++){
+    int i, arr[5];
+    for(i = 0; i <= 4; i++){
         printf("Enter the element for the array :");
         scanf("%d",&arr[i]);
         printf("\n");
     }
-    printf("The reverse order of the elements in the array are :");
+    printf("\nThe reverse order of the elements in the array are :");
     for(int i = 4; i >= 0; i--){
         printf("%d ",arr[i]);
     }
