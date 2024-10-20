@@ -9,13 +9,13 @@ here a[0] - 10, a[1] - 20, a[2] - 30 and so on... a[n] where n refers to the ind
 #include<stdio.h>
 int main(){
     int arr[5] = {1, 2, 3, 4, 5};
-    printf("Indexing 2nd value = %d\n",arr[2]);    // while printing arr[2] here 2 in the [] means it is indexing 2nd value which is 3.
+    printf("Value of 2nd index = %d\n",arr[2]);    // while printing arr[2] here 2 in the [] means it is indexing 2nd value which is 3.
     
     // For value Updation
     // Earleir our data is -> arr[5] = {1, 2, 3, 4, 5}
     arr[4] = 100;   // Here I am changing the 4th index of data in array
     // Now the data is -> arr[5] = 1, 2, 3, 4, 100. where 100 will be printed for arr[4] 
-    printf("4th value after updation = %d ",arr[4]);
+    printf("4th value after updation = %d ",arr[5]);
 
     // For float value:
     float a[5] = {1.12, 2.425, 6.251, 6.14, 8.736};
