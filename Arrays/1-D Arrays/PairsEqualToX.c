@@ -4,13 +4,19 @@
 
 #include<stdio.h>
 int main(){
-    int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int x;
+    int arr[8] = {1, 2, 3, 4, 5, 6, 7, 8};
+    int x, totalcount = 0;
     printf("Enter x :");
     scanf("%d",&x);
-    for (int i = arr[0]; i < 10; i++) {
+    for (int i = 0; i <= 7; i++) {
+        for (int j = i + 1; j <= 7; j++) {
+            if (arr[i] + arr[j] == x){
+            totalcount++;
+            printf("(%d,%d)\n",arr[i],arr[j]);
+            }
+        }
+        
         
     }
-    
     return 0;
 }
