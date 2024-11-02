@@ -36,6 +36,7 @@ int main(){
 
 
 // Done in 1 loop and applicable for ascending & descending both arrays.
+
 #include<stdio.h>
 #include<limits.h>
 int main(){
@@ -47,7 +48,7 @@ int main(){
     //     scanf("%d", &a[i]);
     // }
 
-    int a[6] = {6, 5, 4, 3, 2, 1};
+    int a[6] = {6, 5, 4, 4, 2, 1};
     
     int max = INT_MIN, smax = INT_MIN;
     for (int i = 0; i < 6; i++) {
