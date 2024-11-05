@@ -1,28 +1,46 @@
 #include<stdio.h>
 
-int main(){
-    int n, x, temp;
-    printf("Enter the size of array :");
-    scanf("%d", &n);
-    int a[n];
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void sort(int arr[], int n) {
     for (int i = 0; i < n; i++) {
-        printf("Enter then element no. %d :",i+1);
-        scanf("%d", &a[i]);
-    }
-    printf("Befor sorting the elements :");
-    for (int i = 0; i < n; i++) printf("%d ", a[i]);
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; i++) {
-            if(a[j] < a[j+1]){
-                temp = a[j];
-                a[j] = a[j+1];
-                a[j+1] = temp;
+        int isSwapDone = 0;
+        for (int j = 0; j < n-(i+1); j++) {
+            if (arr[j] > arr[j+1]) {
+                isSwapDone = 1;
+                // swap(&arr[j], &arr[j+1]);
+                int  temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
             }
         }
-        
+        if (isSwapDone == 0) break;
     }
-    printf("After swapping array is :");
-    for (int i = 0; i < n; i++) printf("%d ", a[i]);
+}
+
+int main() {
+    
+    int n; scanf("%d", &n);
+    int arr[n]; 
+    for (int i = 0; i < n; i++) scanf("%d", &arr[i]);
+
+    sort(arr, n);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                int t = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = t;
+            }
+        }
+    }
+
+    for (int i = 0; i < n; i++) printf("%d ", arr[i]);
 
     return 0;
 }
