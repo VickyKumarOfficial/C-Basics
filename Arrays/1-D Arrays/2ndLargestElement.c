@@ -1,32 +1,32 @@
 // Find the 2nd largest number/element from the array.
 
 
-#include<stdio.h>
-#include<limits.h>
-int main(){
-    // for taking input of a array
-    int n; printf("Size of the array :"); scanf("%d", &n);
-    int a[n];
-    for (int i = 0; i < n; i++) {
-        printf("Enter element no. %d of the array :",i+1);
-        scanf("%d", &a[i]);
-    }
+// #include<stdio.h>
+// #include<limits.h>
+// int main(){
+//     // for taking input of a array
+//     int n; printf("Size of the array :"); scanf("%d", &n);
+//     int a[n];
+//     for (int i = 0; i < n; i++) {
+//         printf("Enter element no. %d of the array :",i+1);
+//         scanf("%d", &a[i]);
+//     }
 
-    // int a[6] = {1, 2, 3, 4, 5, 6};
-    int max = INT_MIN, smax = INT_MIN;
-    for (int i = 0; i < 6; i++) {
-        if (max < a[i]) max = a[i];
-    }
-    printf("The largest element = %d\n",max);
-    for (int i = 0; i < 6; i++) {
-        if (smax < a[i] && a[i] != max) smax = a[i];
-    }
+//     // int a[6] = {1, 2, 3, 4, 5, 6};
+//     int max = INT_MIN, smax = INT_MIN;
+//     for (int i = 0; i < 6; i++) {
+//         if (max < a[i]) max = a[i];
+//     }
+//     printf("The largest element = %d\n",max);
+//     for (int i = 0; i < 6; i++) {
+//         if (smax < a[i] && a[i] != max) smax = a[i];
+//     }
 
-    printf("Largest number = %d\n",max);
-    printf("Second largest number = %d",smax);
+//     printf("Largest number = %d\n",max);
+//     printf("Second largest number = %d",smax);
     
-    return 0;
-    }
+//     return 0;
+//     }
     
 
 // More effeceint way. By using only 1 loop.
@@ -48,7 +48,7 @@ int main(){
     //     scanf("%d", &a[i]);
     // }
 
-    int a[6] = {6, 5, 4, 4, 2, 1};
+    int a[6] = {6, 6, 6, 4, 6, 5};
     
     int max = INT_MIN, smax = INT_MIN;
     for (int i = 0; i < 6; i++) {

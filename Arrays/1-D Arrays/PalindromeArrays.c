@@ -9,6 +9,8 @@ void reverse(int arr[]) {
         arr[j] = temp;
         i++;
         j--;
+        if(i==j) printf("It is a Palindrome number!");
+        else printf("It is not a Palindrome number!");
     }
     return;
     
