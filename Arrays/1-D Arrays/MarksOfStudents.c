@@ -5,6 +5,7 @@ int main(){
     int marks[10]={12,56,87,59,97,78,80,67,99,88};  // Given Data
 
     // Or take the inputs
+    
     // for(int i = 1; i <= 11-1; i++){
     //     printf("Enter the marks %d:",i);
     //     scanf("%d",&marks[i]);

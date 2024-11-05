@@ -18,5 +18,6 @@ int main(){
         
         
     }
+    printf("Number of pairs are present = %d", totalcount);
     return 0;
 }
