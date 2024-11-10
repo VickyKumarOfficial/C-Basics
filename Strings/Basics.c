@@ -18,15 +18,15 @@ To print - printf("%s",a);
 
 // WAP to ask the user to enter his name and display hello ____(username).
 
-// #include<stdio.h>
+#include<stdio.h>
 
-// int main(){
-//     char a[10];
-//     printf("Enter your username :");
-//     scanf("%[^\n]s", a);
-//     printf("Hello %s",a);
-//     return 0;
-// }
+int main(){
+    char a[10];
+    printf("Enter your username :");
+    scanf("%[^\n]s", a);
+    printf("Hello %s",a);
+    return 0;
+}
 
 // To count no. of vowels in a given string.
 // To count no. of words in a given string.
