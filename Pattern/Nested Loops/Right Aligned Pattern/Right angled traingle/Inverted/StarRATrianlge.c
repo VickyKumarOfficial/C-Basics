@@ -20,20 +20,20 @@ int main(){
 
 // Both code above and below are same just a bit of logic is different
 
-#include<stdio.h>
+// #include<stdio.h>
 
-int main(){
-    int n;
-    printf("Enter a number :");
-    scanf("%d",&n);
-    for (int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j <= n-i; j++)
-        {
-            printf("* ");
-        }
-        printf("\n");
-    }
+// int main(){
+//     int n;
+//     printf("Enter a number :");
+//     scanf("%d",&n);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= n-i; j++)
+//         {
+//             printf("* ");
+//         }
+//         printf("\n");
+//     }
     
-    return 0;
-}
+//     return 0;
+// }
