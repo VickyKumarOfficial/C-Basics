@@ -1,8 +1,8 @@
 // WAP to display the following pattern:
-// 4444
-// 3333
-// 2222
-// 1111
+// 4 4 4 4
+// 3 3 3 3
+// 2 2 2 2
+// 1 1 1 1
 #include<stdio.h>
 
 int main(){
