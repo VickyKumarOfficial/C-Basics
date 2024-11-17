@@ -1,8 +1,8 @@
 // Display the following pattern:
 /*
-          *
-        * *
-      * * * 
+    *
+    * *
+    * * * 
     * * * *
 */
 
