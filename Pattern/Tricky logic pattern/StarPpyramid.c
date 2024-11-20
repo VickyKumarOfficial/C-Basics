@@ -15,12 +15,12 @@ int main(){
         for(int j=1;j<=i;j++) {
           if (j==1) printf("b");
           else printf("*"); 
-        }
+          }
         for(int k=i-1;k>=1;k--) {
           if (k==1) printf("b");
-          else printf("*");
-        }
+          else printf("*"); 
         printf("\n");
+        }
     }
     return 0;
 }
