@@ -13,10 +13,9 @@ int main(){
     }
     printf("\n");
     for (int i = 0; i < c; i++) {
-        for (int j = 0; j < r; j++) printf("%d ",a[j][i]);
+        for (int j = 0; j < r; j++) printf("%3d",a[j][i]);
         printf("\n");
     }
-    
     
     return 0;
 }
