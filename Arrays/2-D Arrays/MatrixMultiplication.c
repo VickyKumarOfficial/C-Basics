@@ -122,22 +122,18 @@
 
 int main(){
     int m, n, p, q;
-    printf("Enter the row for matrix 1 :");
-    scanf("%d", &m);
-    printf("Enter the column for matrix 1 :");
-    scanf("%d", &n);
-    printf("Enter the row for matrix 2 :");
-    scanf("%d", &p);
-    printf("Enter the column for matrix 2 :");
-    scanf("%d", &q);
+    printf("Enter the row for matrix 1 = "); scanf("%d", &m);
+    printf("Enter the column for matrix 1 = "); scanf("%d", &n);
+    printf("Enter the row for matrix 2 = "); scanf("%d", &p);
+    printf("Enter the column for matrix 2 = "); scanf("%d", &q);
     int a[m][n], b[p][q];
     if(n!=p) printf("Invalid Input!");
     else {
-        printf("Enter the elements of matrix 1 :\n");
+        printf("\nEnter the elements of matrix 1 :\n");
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) scanf("%d", &a[i][j]);
-        }
-        printf("Enter the elements of matrix 2 :\n");
+            }
+        printf("\nEnter the elements of matrix 2 :\n");
         for (int i = 0; i < p; i++) {
             for (int j = 0; j < q; j++) scanf("%d", &b[i][j]);
         }
@@ -145,19 +141,14 @@ int main(){
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < q; j++) {
                 res[i][j] = 0;
-                for (int k = 0; k < n; k++) {
-                    res[i][j] += a[i][k] * b[k][j];
-                }
-                
-            }
-            
+                for (int k = 0; k < n; k++) res[i][j] += a[i][k] * b[k][j];   
+            }  
         }
-        printf("Matrix Multiplication :\n");
+        printf("After Multiplying the matrix we get :\n");
         for (int i = 0; i < m; i++) {
-            for (int j = 0; j < q; j++) printf("%d ",res[i][j]);
+            for (int j = 0; j < q; j++) printf("%3d",res[i][j]);
             printf("\n");
         }
-
     }
     return 0;
 }

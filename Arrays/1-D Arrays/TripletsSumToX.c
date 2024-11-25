@@ -16,5 +16,6 @@ int main(){
             }
         }
     }
+    printf("Total number of ways = %d",totalcount);
     return 0;
 }

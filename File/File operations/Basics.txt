@@ -1,0 +1,11 @@
+File operation:
+1. Open
+2. Write
+3. append
+4. Read
+5. Close
+
+1. Open - Activate the file: bring the file from secondary memory to the main memory
+2. Write - Storing data from RAM to file.
+3. Appened - 
+5. Close - Deactivate the file: remove the file from the RAM and store back in Hard disk.

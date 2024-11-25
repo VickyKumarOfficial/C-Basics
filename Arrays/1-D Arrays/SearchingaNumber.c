@@ -20,8 +20,8 @@ int main(){
             printf("Data Found!");
             break;
         }
-    }
         else printf("Data not Found!");
+    }
 
     return 0;
 }

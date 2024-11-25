@@ -1,0 +1,6 @@
+File - It is a logical storage device used to store data permanently.
+Types of files:
+1. File types
+2. File operation
+3. File function
+4. Program

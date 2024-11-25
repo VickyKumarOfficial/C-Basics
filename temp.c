@@ -1,35 +1,29 @@
-// #include<stdio.h>
-
-// int main(){
-//     int n = 5;
-//     for (int i = 1; i <= n; i++) {
-//         for (int j = 1; j <= n-i+1; j++) {
-//             printf(" ");
-//         }
-//         for (int k = 1; k <= i; k++) {
-//             printf("%d",k);
-//         }
-//         for (int l = i-1; l >= 1; l--) {
-//             printf("%d",l);
-//         }
-//         printf("\n");
-//     }
-//     return 0;
-//  }
-
 #include<stdio.h>
 
 int main(){
-    int n = 4;
-    int a=1;
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= n-i; j++) printf(" ");
-        for (int k = 1; k <= i; k--) {
-            printf("%d",a);
-            a++;
-        }
-        printf("\n");
+    int n, x, low = 0, high, mid;
+    printf("Enter the size of the array = "); scanf("%d", &n);
+    int a[n];
+    for (int i = 0; i < n; i++) {
+        printf("Enter the element no. %d = ",i+1);
+        scanf("%d",&a[i]);
     }
+    printf("Your array is = ");
+    for (int i = 0; i < n; i++) printf("%d ",a[i]);
+    
+    printf("\nEnter the number to be searched in the array = ");
+    scanf("%d", &x);
+    high = n-1;
+    while (low <= high) {
+        mid = (low+high)/2;
+        if (a[mid] == x) {
+            printf("Element found at the index %d",mid);
+            return 0;
+        }
+        else if (a[mid] < x) low = mid + 1;
+        else high = mid - 1;
+    }
+    printf("Element not found in the array!");
     
     return 0;
 }

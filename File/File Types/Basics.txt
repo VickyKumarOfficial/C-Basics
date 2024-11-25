@@ -1,0 +1,1 @@
+Text File - It is a logical storage device used to store data permanantely.
