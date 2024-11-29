@@ -143,15 +143,13 @@ void peek() {
 // QUEUE
 
 void enqueue(int x) {
- if (rear == n - 1) {
-  printf("\nQueue is full\n");
- } else if (rear == -1) {
-  rear++;
-  front++;  
-  q[rear] = x;
- } else {
-  q[++rear] = x;
- }
+    if (rear == n - 1) printf("\nQueue is full\n");
+    else if (rear == -1) {
+        rear++;
+        front++;  
+        q[rear] = x;
+    }
+    else q[++rear] = x;
 }
 
 

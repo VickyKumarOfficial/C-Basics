@@ -29,5 +29,5 @@ int main(){
     printf("Number of letters are = %d\n",count); 
     printf("Number of spaces are = %d\n",space); 
     printf("Number of spaces and alphabets both = %d\n",count+space);
-    return 0;
+    return 0; 
 }
