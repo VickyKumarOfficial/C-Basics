@@ -28,21 +28,27 @@ int main(){
     return 0;
 }
 
-// To count no. of vowels in a given string.
-// To count no. of words in a given string.
-// To count no. of lower cases, upper cases, no. of digits & no. of special symbols in a email I'd.(Email I'd should be taken in input by the user)
-// To check whether the given string is palindorme or not.
-// To convert each alphabet from upper to lower case & lower to upper case or flip every alphabets in the string.
-// Encrypt the password which is taken as input. If the letter is a vowel then replace it with previous letter and if the letter in the pass is a consonent then replace it with the next aplhabet. Do for every single alphabet in pass.
-// For ex: pass - telugu, 
-// previuos aplhabet should be replace the vowels: e -> d, u -> t, 
-// Next aplhabet should be replace the consonents: t -> u, l -> m, g -> h
-// Now, encrypted pass is = udmtht
-// To ask the user to enter first and last name and display it together.
-// Display the given sentence in reverse order with respect to words. For ex - My name is Raj. Output - Raj is name My.
-// Display each word in teh sentece in reverse order. For ex - My name is Raj. Output - jaR si eman yM.
-// To sort array of names
-// To count no. of characters given in the string.
+/* 
+
+SOME QUESTIONS TO PRACTICE
+
+1. To count no. of vowels in a given string.
+2. To count no. of words in a given string.
+3. To count no. of lower cases, upper cases, no. of digits & no. of special symbols in a email I'd.(Email I'd should be taken in input by the user)
+4. To check whether the given string is palindorme or not.
+5. To convert each alphabet from upper to lower case & lower to upper case or flip every alphabets in the string.
+6. Encrypt the password which is taken as input. If the letter is a vowel then replace it with previous letter and if the letter in the pass is a consonent then replace it with the next aplhabet. Do for every single alphabet in pass.
+   For ex: pass - telugu, 
+previuos aplhabet should be replace the vowels: e -> d, u -> t, 
+Next aplhabet should be replace the consonents: t -> u, l -> m, g -> h
+Now, encrypted pass is = udmtht
+7. To ask the user to enter first and last name and display it together.
+8. Display the given sentence in reverse order with respect to words. For ex - My name is Raj. Output - Raj is name My.
+Display each word in teh sentece in reverse order. For ex - My name is Raj. Output - jaR si eman yM.
+9. To sort array of names
+10. To count no. of characters given in the string.
+
+*/
 
 // How to count numeber of letters:
 

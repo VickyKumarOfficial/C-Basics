@@ -257,7 +257,7 @@ void search() {
 void insertbegin() {
     t = (node *)malloc(sizeof(node));
     printf("Enter the data part: ");
-    scanf("%d", &x);
+    scanf("z%d", &x);
     t->data = x;
     t-> link = head;
     head = t;
