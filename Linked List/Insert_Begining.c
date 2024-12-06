@@ -44,7 +44,7 @@ int main () {
     display (head);     // Displaying Before insertion
     head = insertbegin(head,52);
     printf("\n");
-    display (head);     // DisplayingAfter insertion
+    display (head);     // Displaying After insertion
 
     return 0;
 }
