@@ -11,21 +11,17 @@ int main(){
     scanf("%d",&x);
     if (x>80)
         printf("Your grade is A");
-    else 
-        if (x>70){
+    else if (x>70){
                 printf("Your grade is B");
             }
-    else
-        if (x>60){
+    else if (x>60){
             printf("Your grade is C");
         }    
-    else
-        if (x>50){
+    else if (x>50){
             printf("Your grade is D");
         }
     
-    else
-        printf("Your grade is E");
+    else printf("Your grade is E");
     
     return 0;
 }
