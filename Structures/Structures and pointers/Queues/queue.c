@@ -10,36 +10,32 @@ void enque(int d);
 int deque();
 void display();
 
-int main()
-{
-  int x,ch,d;
-  while(1)
-  {
-  
-printf("\n1. enque\n2. deque\n3. display\n4.exit ");
-printf("\nEnter your choice");
-scanf("%d",&ch);
-switch(ch)
-{
-  case 1:
-    printf("Enter data to insert");
-    scanf("%d",&d);
-    enque(d);
-    break;
-  case 2:
-    x = deque();
-    printf("\nDeleted data is %d ",x);
-    break;
-  case 3:
-    display();
-    break;
-  case 4:
-    printf("\n Bye Bye");
-    exit(1);
-  default:
-    printf("Invalid choice");
-}
-}
+int main() {
+    int x,ch,d;
+    while(1) { 
+        printf("\n1. enque\n2. deque\n3. display\n4.exit ");
+        printf("\nEnter your choice");
+        scanf("%d",&ch);
+        switch(ch) {
+          case 1:
+            printf("Enter data to insert");
+            scanf("%d",&d);
+            enque(d);
+            break;
+          case 2:
+            x = deque();
+            printf("\nDeleted data is %d ",x);
+            break;
+          case 3:
+            display();
+            break;
+          case 4:
+            printf("\n Bye Bye");
+            exit(1);
+          default:
+            printf("Invalid choice");
+        }
+    }
 }
 void enque(int d)
 {
@@ -54,7 +50,7 @@ void enque(int d)
   q[rear]=d;
     }
     else //normal insertion
-    {
+    { 
     rear = rear +1;
   q[rear]=d;  
   }

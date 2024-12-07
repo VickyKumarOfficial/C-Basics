@@ -16,18 +16,33 @@
 // To exlude those spaces:
 
 
+// #include<stdio.h>
+
+// int main(){
+//     char a[100], count = 0, space = 0;
+//     printf("Enter any sentence :");
+//     scanf("%[^\n]s",a);
+//     for (int i = 0; a[i] != '\0'; i++) {
+//         if(a[i] == ' ') space++;
+//         else count++;
+//     }
+//     printf("Number of letters are = %d\n",count); 
+//     printf("Number of spaces are = %d\n",space); 
+//     printf("Number of spaces and alphabets both = %d\n",count+space);
+//     return 0; 
+// }
+
+// To count just number of characters then use this code.
+
 #include<stdio.h>
 
 int main(){
-    char a[100], count = 0, space = 0;
-    printf("Enter any sentence :");
+    char a[100], count = 0;
+    printf("Enter any sentence.word :");
     scanf("%[^\n]s",a);
     for (int i = 0; a[i] != '\0'; i++) {
-        if(a[i] == ' ') space++;
-        else count++;
+        if(a[i] != '\0') count++;
     }
-    printf("Number of letters are = %d\n",count); 
-    printf("Number of spaces are = %d\n",space); 
-    printf("Number of spaces and alphabets both = %d\n",count+space);
+    printf("Number of letters are = %d\n",count);
     return 0; 
 }
