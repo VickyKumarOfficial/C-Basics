@@ -84,10 +84,6 @@ void insertAtPosition(int position, int n) {
 int main() {
     insertAtBeginning(7);
     insertAtPosition(3, 5);    // First number is the position and second is the value for inssertion.
-    insertAtPosition(4, 3);
-    insertAtPosition(5, 8);
-    insertAtPosition(6, 4);
-    insertAtPosition(7, 10);
     insertAtBeginning(4);
     insertAtBeginning(5);
     printList();

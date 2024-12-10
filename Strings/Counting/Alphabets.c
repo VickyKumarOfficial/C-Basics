@@ -40,9 +40,7 @@ int main(){
     char a[100], count = 0;
     printf("Enter any sentence.word :");
     scanf("%[^\n]s",a);
-    for (int i = 0; a[i] != '\0'; i++) {
-        if(a[i] != '\0') count++;
-    }
+    for (int i = 0; a[i] != '\0'; i++) count++;
     printf("Number of letters are = %d\n",count);
     return 0; 
 }

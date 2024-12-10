@@ -27,10 +27,12 @@ int main () {
     struct node *head;
     struct node *second;
     struct node *third;
+    struct node *fourth;
 
     head = (struct node *)malloc(sizeof(struct node));
     second = (struct node *)malloc(sizeof(struct node));
     third = (struct node *)malloc(sizeof(struct node));
+    fourth = (struct node *)malloc(sizeof(struct node));
 
     head->data = 10;
     head->next = second;
@@ -40,6 +42,9 @@ int main () {
 
     third->data = 30;
     third->next = NULL;
+
+    fourth->data = 40;
+    fourth->next = NULL;
 
     display (head);     // Displaying Before insertion
     head = insertbegin(head,52);
