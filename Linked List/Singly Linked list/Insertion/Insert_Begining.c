@@ -1,3 +1,7 @@
+/*
+[VERY UNEFFECEINT WAY TO DO LINKED LIST]
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 

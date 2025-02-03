@@ -86,6 +86,7 @@ int main() {
     insertAtPosition(3, 5);    // First number is the position and second is the value for inssertion.
     insertAtBeginning(4);
     insertAtBeginning(5);
+    insertAtPosition(2, 6);
     printList();
     return 0;
 }
