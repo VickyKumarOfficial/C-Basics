@@ -20,7 +20,6 @@ void InsertBegining(int n) {
     }
 }
 
-
 void insertLast(int n) {
     struct node *newNode = malloc(sizeof(struct node));
     newNode->data = n;
