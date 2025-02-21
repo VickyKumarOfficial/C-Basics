@@ -22,10 +22,10 @@ int main() {
   printf("\nINPUT THE EXPRESSION : ");
   scanf("%s", exp);
   for(int i = 0; i < strlen(exp); i++) {
-    if(exp[i] == '('  exp[i] == '['  exp[i] == '{') {
+    if(exp[i] == '(' || exp[i] == '[' ||  exp[i] == '{') {
       push(exp[i]); // Push the open bracket
     }
-    else if(exp[i] == ')'  exp[i] == ']'  exp[i] == '}') {
+    else if(exp[i] == ')' || exp[i] == ']' || exp[i] == '}') {
       if(exp[i] == ')') {
         if(stk[top] == '(') pop(); // Pop the stack until closed bracket is found
         else {
