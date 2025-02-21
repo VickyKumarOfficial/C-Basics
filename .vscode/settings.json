@@ -4,5 +4,6 @@
         "type_traits": "c",
         "stdlib.h": "c",
         "string.h": "c"
-    }
+    },
+    "editor.fontSize": 17.5
 }

@@ -1,6 +1,13 @@
 // LIFO
-//  1 2 3 4 5 6
-//  0 1 2 3 4(t)<- 5
+/*
+    NULL -> 
+    1 - 0
+    2 - 1
+    3 - 2
+    4 - 3
+    5 - 4
+    6 - 5 top
+*/
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -10,33 +17,28 @@ struct node {
     int data;
     struct node *prev;
 } *top = NULL;
-
 // bool isNull(){ return (top==NULL)? true : false;}
-
 void push(int n) {
     struct node *nn = malloc(sizeof(struct node));
     nn -> data = n;
     nn -> prev = top;
     top = nn;
-    printf("Data inserted = %d\n",n);
 }
-
 void pop() {
     // if (isNull()) return;
     if (top == NULL) printf("Stack is empty!");
     else {
         struct node *temp = top;
         top = top -> prev;
+        printf("Deleted data = %d",temp -> data);
         free(temp);
     }
 }
-
 void peek() {
     // if (isNull()) return;
     if (top == NULL) printf("Stack is empty!");
-    printf("Top Data = %d\n",top->data);
+    else printf("Top Data = %d\n",top->data);
 }
-
 void display() {
     // if (isNull()) return;
     if (top == NULL) printf("Stack is empty!");
@@ -46,7 +48,6 @@ void display() {
         temp = temp -> prev;
     }
 }
-
 int main(){
     push(5);
     push(3);
