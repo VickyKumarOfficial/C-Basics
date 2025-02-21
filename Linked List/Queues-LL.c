@@ -13,9 +13,10 @@ void enqueue(int n) {
     struct node *nn = malloc(sizeof(struct node));
     nn -> data = n;
     if (rear == NULL) {
-        front = rear = nn;
+        front = nn;
+        rear = nn;
     } else {
-        nn -> next = NULL;
+        rear -> next = nn;
         rear = nn;
     }
 }
@@ -26,8 +27,7 @@ void dequeue() {
         free(front);
         front = NULL;
         rear = NULL;
-    }
-    else {
+    } else {
         struct node *temp = front;
         front = front -> next;
         printf("Data deleted = %d",temp->data);
