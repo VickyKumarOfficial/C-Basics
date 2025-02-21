@@ -8,12 +8,11 @@ struct node {
 };
 struct node *head = NULL, *tail = NULL;
 
-// NULL <- (nh)0(nn) -> 1(h) -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8(t) -> NULL
 void InsertBegining(int n) {
     struct node *newNode = malloc(sizeof(struct node));
     newNode->data=n;
     newNode->prev=NULL;
-    if (head == NULL) { //  NULL <- 1 -> NULL
+    if (head == NULL) {
         head = tail = newNode;
         tail->next = NULL;
     } else {
@@ -23,7 +22,6 @@ void InsertBegining(int n) {
     }
 }
 
-// NULL <- (nh)0(nn) -> 1(h) -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> (nn)(t) -> NULL
 void insertLast(int n) {
     struct node *newNode = malloc(sizeof(struct node));
     newNode->data = n;
@@ -62,7 +60,6 @@ void intsertPosition(int position, int n) {
             c++;
             temp = temp->next;
         }
-        // NULL <- 1(h) -> 2 -> 3(temp) -> (nn) -> 4(hold) -> 5 -> 6 -> 7 -> 8 -> NULL
         struct node *hold = temp->next;
         temp->next = newNode;
         newNode->next = hold;
@@ -113,27 +110,24 @@ void deleteAtBeginning() {
         struct node *hold = head;
         head = head->next;
         free(hold);
+        head->prev = NULL;
     }
 }
 
 void deleteAtLast() {
-    if (head == NULL) {
-        printf("No List!");
-    } 
+    if (head == NULL) printf("No List!");
     else if (head->next == NULL) {
         free(head);
         head = tail = NULL;
-    } 
-    else {
+    } else {
         struct node *temp = head;
         while (temp -> next != tail) {
             temp = temp->next;
         }
-        
-        struct node *hold = tail;
-        free(hold);
-        temp->next = NULL;
-        tail = temp;
+        struct node *hold = tail -> prev;
+        free(tail);
+        hold->next = NULL;
+        tail = hold;
     }
 }
 
@@ -149,10 +143,13 @@ void deleteAtPosition(int position) {
             temp = temp->next;
         }
         struct node *hold = temp->next;
-        temp->next = temp->next->next;
+        struct node *nextNode = hold->next;
+        temp->next = nextNode;
+        if (nextNode != NULL) nextNode->prev = temp;
         free(hold);
     }
 }
+
 int main() {
     InsertBegining(6);
     InsertBegining(7);
@@ -163,6 +160,14 @@ int main() {
     deleteAtLast();
     insertLast(10);
     display();
+    deleteAtLast();
+    insertLast(23);
+    printf("\n");
+    display();
+    intsertPosition(4, 30);
+    printf("\n");
+    display();
+    deleteAtPosition(4);
     printf("\n");
     display_b();
     // printf("Max = %d\n",max());
