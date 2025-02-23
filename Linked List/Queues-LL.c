@@ -1,9 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-//  1(f) 2 3 4 5 6(r) nn -> NULL
-// (f/r) 4 -> NULL
-
 struct node {
     int data;
     struct node *next;
@@ -30,19 +27,20 @@ void dequeue() {
     } else {
         struct node *temp = front;
         front = front -> next;
-        printf("Data deleted = %d",temp->data);
+        printf("Data deleted = %d\n",temp->data);
         free(temp);
     }
 }
 
 void display() {
-    if (rear == NULL) printf("Queues is empty laude!");
+    if (rear == NULL) printf("Queues is empty!");
     else {
         struct node *temp = front;
         while(temp != NULL) {
             printf("%3d",temp->data);
             temp = temp->next;
         }
+        printf("\n");
     }
 }
 int main(){

@@ -1,12 +1,13 @@
 // LIFO
 /*
-    NULL -> 
+    here stack is top to bottom form.
+    NULL <- top(When no data is there)
     1 - 0
     2 - 1
     3 - 2
     4 - 3
     5 - 4
-    6 - 5 top
+    6 - 5 <- top
 */
 
 #include<stdio.h>
