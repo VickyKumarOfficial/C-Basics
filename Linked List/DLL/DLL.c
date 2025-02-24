@@ -113,6 +113,8 @@ void deleteAtLast() {
         while (temp -> next != tail) {
             temp = temp->next;
         }
+        // 2 4 5 6 7 
+        // 1 2 3 4 5 6
         struct node *hold = tail -> prev;
         free(tail);
         hold->next = NULL;
@@ -123,7 +125,8 @@ void deleteAtLast() {
 void deleteAtPosition(int position) {
     int s = size();
     if (head == NULL || position == 1) deleteAtBeginning();
-    else if (position >= s) deleteAtLast();
+    else if (position > s) printf("Size doesn't exist");
+    else if (position == s) deleteAtLast();
     else {
         int c = 1;
         struct node *temp = head;
@@ -136,7 +139,6 @@ void deleteAtPosition(int position) {
         temp->next = nextNode;
         if (nextNode != NULL) nextNode->prev = temp;
         free(hold);
-        tail->next = head;
     }
 }
 

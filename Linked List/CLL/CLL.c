@@ -103,8 +103,7 @@ void deleteAtBeginning() {
 void deleteAtLast() {
     if (head == NULL) {
         printf("No List!");
-    } 
-    else if (head->next == NULL) {
+    } else if (head->next == NULL) {
         free(head);
         head = tail = NULL;
     } 
