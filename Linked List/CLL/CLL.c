@@ -4,34 +4,32 @@
 struct node {
     int data;
     struct node *next;
-    struct node *prev;
 };
 struct node *head = NULL, *tail = NULL;
 
 void InsertBegining(int n) {
     struct node *newNode = malloc(sizeof(struct node));
     newNode->data=n;
-    newNode->prev=NULL;
     if (head == NULL) {
         head = tail = newNode;
-        tail->next = NULL;
     } else {
         newNode->next = head;
-        head -> prev = newNode;
         head = newNode;
     }
+    tail->next = head;
 }
 
 void insertLast(int n) {
     struct node *newNode = malloc(sizeof(struct node));
     newNode->data = n;
-    newNode->next = NULL;
-    if (head == NULL) InsertBegining(n);
-    else {
+    if (head == NULL) {
+        head = tail = newNode;
+    } else {
         tail->next = newNode;
-        newNode->prev = tail;
+        newNode->next = NULL;
         tail = newNode;
-    }
+    } 
+    tail->next = head;
 }
 
 int size() {
@@ -39,10 +37,10 @@ int size() {
     if (head == NULL) return 0;
     int c = 1;
     temp = head;
-    while (temp != NULL) {
-        c++;
-        temp = temp->next;
-    }
+    do {
+       c++;
+       temp = temp->next;
+    } while (temp != head);
     return c;
 }
 
@@ -55,7 +53,6 @@ void intsertPosition(int position, int n) {
         newNode->data = n;
         int c = 1;
         struct node *temp = head;
-        head->prev = NULL;
         while (c != position - 1) {
             c++;
             temp = temp->next;
@@ -63,20 +60,19 @@ void intsertPosition(int position, int n) {
         struct node *hold = temp->next;
         temp->next = newNode;
         newNode->next = hold;
-        hold->prev = newNode;
-        newNode->prev = temp;
     }
+    tail->next = head;
 }
 
 void display() {
     if (head == NULL) printf("List is empty!"); 
     else {
-        printf("Data : ");
         struct node *temp = head;
-        while (temp != NULL) {
+        do {
             printf("%3d",temp->data);
             temp = temp->next;
-        }
+        } while (temp != head);
+        printf("\n");
     }
 }
 
@@ -84,12 +80,13 @@ int max() {
     if (head == NULL) return -1;
     int ans = 0;
     struct node *temp = head;
-    while (temp != NULL) {
+    do {
         if (temp->data > ans) {
             ans = temp->data;
         }
         temp = temp->next;
     }
+    while (temp != head);
     return ans;
 }
 
@@ -99,24 +96,27 @@ void deleteAtBeginning() {
         struct node *hold = head;
         head = head->next;
         free(hold);
-        head->prev = NULL;
     }
+    tail->next = head;
 }
 
 void deleteAtLast() {
-    if (head == NULL) printf("No List!");
+    if (head == NULL) {
+        printf("No List!");
+    } 
     else if (head->next == NULL) {
         free(head);
         head = tail = NULL;
-    } else {
+    } 
+    else {
         struct node *temp = head;
         while (temp -> next != tail) {
             temp = temp->next;
         }
-        struct node *hold = tail -> prev;
-        free(tail);
-        hold->next = NULL;
-        tail = hold;
+        struct node *hold = tail;
+        free(hold);
+        tail = temp;
+        temp->next = head;
     }
 }
 
@@ -132,35 +132,20 @@ void deleteAtPosition(int position) {
             temp = temp->next;
         }
         struct node *hold = temp->next;
-        struct node *nextNode = hold->next;
-        temp->next = nextNode;
-        if (nextNode != NULL) nextNode->prev = temp;
+        temp->next = temp->next->next;
         free(hold);
-        tail->next = head;
     }
+    tail->next = head;
 }
-
 int main() {
     InsertBegining(6);
     InsertBegining(7);
-    InsertBegining(5);
-    InsertBegining(8);
     insertLast(9);
-    intsertPosition(4, 1);
-    deleteAtLast();
-    insertLast(10);
+    intsertPosition(3, 5);
     display();
     deleteAtLast();
-    insertLast(23);
-    printf("\n");
     display();
-    intsertPosition(4, 30);
-    printf("\n");
-    display();
-    deleteAtPosition(4);
-    printf("\n");
-    display();
-    // printf("Max = %d\n",max());
-    // 8 5 5 7 6
+    printf("Max = %d\n",max());
+    
     return 0;
 }
