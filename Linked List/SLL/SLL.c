@@ -8,7 +8,7 @@ struct node {
 struct node *head = NULL, *tail = NULL;
 
 void InsertBegining(int n) {
-    struct node *newNode = malloc(sizeof(struct node));
+    struct node *newNode = (struct node*)malloc(sizeof(struct node));
     newNode->data=n;
     if (head == NULL) {
         head = tail = newNode;
@@ -20,7 +20,7 @@ void InsertBegining(int n) {
 }
 
 void insertLast(int n) {
-    struct node *newNode = malloc(sizeof(struct node));
+    struct node *newNode = (struct node*)malloc(sizeof(struct node));
     newNode->data = n;
     if (head == NULL) {
         head = tail = newNode;
@@ -49,7 +49,7 @@ void intsertPosition(int position, int n) {
     if (head == NULL || position == 1) InsertBegining(n);
     else if (position >= s) insertLast(n);
     else {
-        struct node *newNode = malloc(sizeof(struct node));
+        struct node *newNode = (struct node*)malloc(sizeof(struct node));
         newNode->data = n;
         int c = 1;
         struct node *temp = head;
@@ -134,13 +134,46 @@ void deleteAtPosition(int position) {
     }
 }
 int main() {
-    InsertBegining(6);
-    InsertBegining(7);
-    insertLast(9);
-    intsertPosition(3, 5);
-    deleteAtLast();
-    display();
-    printf("Max = %d\n",max());
-    
+    // InsertBegining(6);
+    // InsertBegining(7);
+    // insertLast(9);
+    // intsertPosition(3, 5);
+    // deleteAtLast();
+    // display();
+    // printf("Max = %d\n",max());
+    int n, num, pos;
+    printf("Enter your choice:\n");
+    printf("1. Insert at beg\n2. Insert at pos\n3. Insert at last");
+    printf("\n4. Delete at beg\n5. Delete at pos\n6. Delete at last");
+    switch (n) {
+    case 1:
+        printf("Enter the data to insert: ");
+        scanf("%d", &num);
+        InsertBegining(num);
+        break;
+    case 2:
+        printf("Enter the data to insert: ");
+        scanf("%d", &num);
+        printf("Enter position for the data: ");
+        scanf("%d", &pos);
+        intsertPosition(pos,num);
+    case 3:
+        printf("Enter the data to insert: ");
+        scanf("%d", &num);
+        insertLast(num);
+    case 4:
+        deleteAtBeginning();
+        printf("Data deleted succesfully!");
+    case 5:
+        printf("Give the position to delete the data: ");
+        deleteAtPosition(num);
+        printf("Data deleted succesfully!");
+    case 6:
+        deleteAtLast();
+        printf("Data deleted succesfully!");
+    default:
+    printf("Invalid Input!");
+    break;
+    }
     return 0;
 }

@@ -18,7 +18,7 @@ struct node {
     int data;
     struct node *prev;
 } *top = NULL;
-// bool isNull(){ return (top==NULL)? true : false;}
+bool isNull(){ return (top==NULL)? true : false;}
 void push(int n) {
     struct node *nn = malloc(sizeof(struct node));
     nn -> data = n;
@@ -26,8 +26,7 @@ void push(int n) {
     top = nn;
 }
 void pop() {
-    // if (isNull()) return;
-    if (top == NULL) printf("Stack is empty!");
+    if (isNull()) return;
     else {
         struct node *temp = top;
         top = top -> prev;
@@ -36,13 +35,11 @@ void pop() {
     }
 }
 void peek() {
-    // if (isNull()) return;
-    if (top == NULL) printf("Stack is empty!");
+    if (isNull()) return;
     else printf("Top Data = %d\n",top->data);
 }
 void display() {
-    // if (isNull()) return;
-    if (top == NULL) printf("Stack is empty!");
+    if (isNull()) return;
     struct node *temp = top;
     while (temp != NULL) {
         printf("%3d",temp->data);
