@@ -10,7 +10,7 @@ struct node *head = NULL, *tail = NULL;
 void InsertBegining(int n) {
     struct node *newNode = (struct node*)malloc(sizeof(struct node));
     newNode->data=n;
-    if (head == NULL) {
+    if (head == NULL)  {
         head = tail = newNode;
         tail->next = NULL;
     } else {
